@@ -64,11 +64,12 @@ controllers1 = children = [html.H2('Control',
                                     style = light_title),
                     
                             html.Hr(),
-                            
+                            html.Label('World Regions'),
                             dcc.Dropdown(id = 'dropdown_region',
                                           options=[{'label': x, 'value': x} for x in list_RN],
                                           value = 'World'),
-                            
+                            html.Br(),
+                            html.Label('Countries'),
                             dcc.Dropdown (
                                 
                                 id = 'dropdown_country',
@@ -79,8 +80,8 @@ controllers1 = children = [html.H2('Control',
                                 
                                 
                             ),
-                            
-                            
+                            html.Br(),
+                            html.Label('Genders'),
                             dcc.Dropdown (
                                 
                                 id = 'dropdown_gender',
@@ -91,13 +92,15 @@ controllers1 = children = [html.H2('Control',
                                 
                                 style = {'marginTop':'1%'}
                             ),
-                            
+                            html.Br(),
+                            html.Label('Death causes'),
                             dcc.Dropdown(id = 'dropdown_causes',
                                          options=[{'label': x, 'value': x} for x in list_causes],
                                          value = 'All causes',
                                 
                                         style = {'marginTop':'1%'}),
                              html.Br(),
+                             html.Label('Years'),
                              dcc.Slider(
                     
                                     min = min(df['Year']),
@@ -115,11 +118,14 @@ controllers2 = children = [html.H2('Control',
                                     style = light_title),
                     
                             html.Hr(),
-                            
+                            html.Br(),
+                            html.Label('World Regions'),
                             dcc.Dropdown(id = 'dropdown_region',
                                           options=[{'label': x, 'value': x} for x in list_RN],
                                           value = 'World'),
                             
+                            html.Br(),
+                            html.Label('Countries'),
                             dcc.Dropdown (
                                 
                                 id = 'dropdown_country',
@@ -131,7 +137,8 @@ controllers2 = children = [html.H2('Control',
                                 
                             ),
                             
-                            
+                            html.Br(),
+                            html.Label('Genders'),
                             dcc.Dropdown (
                                 
                                 id = 'dropdown_gender',
@@ -143,12 +150,16 @@ controllers2 = children = [html.H2('Control',
                                 style = {'marginTop':'1%'}
                             ),
                             
+                            html.Br(),
+                            html.Label('Death causes'),
                             dcc.Dropdown(id = 'dropdown_causes',
                                          options=[{'label': x, 'value': x} for x in list_causes],
                                          value = 'All causes',
                                 
                                         style = {'marginTop':'1%'}),
-            
+                            
+                            html.Br(),
+                            html.Label('Age Groups'),
                              dcc.Dropdown(id = 'dropdown_age',
                                              options=[{'label': x, 'value': x} for x in list_age_groups],
                                              value = '[All]',

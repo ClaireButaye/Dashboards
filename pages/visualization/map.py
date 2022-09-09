@@ -59,10 +59,13 @@ layout = dbc.Container(
       dbc.Row (id = 'topRow',
                children = [dbc.Col(
                                   dbc.Card(
-                                           dbc.CardBody([dcc.Dropdown(id = 'animated_map_dropdown_regions',
+                                           dbc.CardBody([
+                                                       html.Label('World Regions'),
+                                                       dcc.Dropdown(id = 'animated_map_dropdown_regions',
                                                               options=[{'label': x, 'value': x} for x in list_RN],
                                                               value = 'World'),
                                                        html.Br(),
+                                                       html.Label('Death causes'),
                                                        dcc.Dropdown(id = 'animated_map_dropdown_causes',
                                                               options=[{'label': x, 'value': x} for x in list_causes],
                                                               value = 'All causes')]),
